@@ -1,13 +1,13 @@
 
 public class Articles{
 	Users usersMock;
-	IArticlesRepository articlesRepository;
+	ArticlesRepository articlesRepository;
 
 	/**
 	 * @param users
 	 * @param articlesRepository
 	 */
-	public Articles(Users users, IArticlesRepository articlesRepository) {
+	public Articles(Users users, ArticlesRepository articlesRepository) {
 		super();
 		this.usersMock = users;
 		this.articlesRepository = articlesRepository;

@@ -21,7 +21,7 @@ public class FuntionalTest {
 		 *  - la conexion a Internet.
 		 * Por eso los siguo considerando como mock
 		 */
-		IArticlesRepository repositoryArticles = mock(IArticlesRepository.class);
+		ArticlesRepository repositoryArticles = mock(ArticlesRepository.class);
 		INetConection internetConection = mock(INetConection.class);
 		
 		publishSite = new TwitterPub(internetConection);

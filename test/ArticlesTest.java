@@ -9,7 +9,7 @@ import org.junit.Test;
 public class ArticlesTest {
 	Articles articles;
 	Users usersMock;
-	IArticlesRepository repositoryArticles;
+	ArticlesRepository repositoryArticles;
 	Article articleDummy;
 	
 	@Before
@@ -17,7 +17,7 @@ public class ArticlesTest {
 		// Creacion gestor de usuario como mock
 		usersMock = mock(Users.class);
 		// Creacion del respositorio de articulo
-		repositoryArticles = mock(IArticlesRepository.class);
+		repositoryArticles = mock(ArticlesRepository.class);
 		
 		// Creacion de un articulo dummy
 		articleDummy = mock(Article.class);
