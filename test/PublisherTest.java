@@ -11,7 +11,7 @@ public class PublisherTest {
 	
 	private Publisher publisher;
 	private Articles articlesMock;
-	private IPublishSite publishSiteMock;
+	private PublishSite publishSiteMock;
 	private Article articleDummy;
 	
 	@Before
@@ -21,7 +21,7 @@ public class PublisherTest {
 		articlesMock = mock(Articles.class);
 		
 		// Creacion del site de publicacion como 'mock'
-		publishSiteMock = mock(IPublishSite.class);		
+		publishSiteMock = mock(PublishSite.class);		
 		
 		// Creacion del publicador
 		publisher = new Publisher(articlesMock, publishSiteMock);

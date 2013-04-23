@@ -8,7 +8,7 @@ public class FuntionalTest {
 	
 	private Publisher publisher;
 	private Articles articles;
-	private IPublishSite publishSite;
+	private PublishSite publishSite;
 	private Article article;
 
 	@Test
@@ -22,7 +22,7 @@ public class FuntionalTest {
 		 * Por eso los siguo considerando como mock
 		 */
 		ArticlesRepository repositoryArticles = mock(ArticlesRepository.class);
-		INetConection internetConection = mock(INetConection.class);
+		NetConection internetConection = mock(NetConection.class);
 		
 		publishSite = new TwitterPub(internetConection);
 		article = new Article(new User(),"titulo", "body");

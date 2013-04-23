@@ -11,9 +11,9 @@ public class TwitterPubTest {
 	public void twittPushArticleToInternet() {
 
 		//Creacion de la conexion a Internet como mock
-		INetConection netConectionMock = mock(INetConection.class);
+		NetConection netConectionMock = mock(NetConection.class);
 		
-		IPublishSite twitterPub = new TwitterPub(netConectionMock);
+		PublishSite twitterPub = new TwitterPub(netConectionMock);
 		
 		// Creacion de un articulo dummy
 		Article articleDummy = mock(Article.class);

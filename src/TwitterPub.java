@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
-public class TwitterPub implements IPublishSite {
+public class TwitterPub implements PublishSite {
 
-	INetConection netConection;
+	NetConection netConection;
 
-	public TwitterPub(INetConection netConection) {
+	public TwitterPub(NetConection netConection) {
 		this.netConection = netConection;
 	}
 

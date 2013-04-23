@@ -1,12 +1,12 @@
 
 public class Publisher {
 	private Articles articles;
-	private IPublishSite twitterPub;
+	private PublishSite twitterPub;
 	/**
 	 * @param articles
 	 * @param twitterPub
 	 */
-	public Publisher(Articles articles, IPublishSite publishSite) {
+	public Publisher(Articles articles, PublishSite publishSite) {
 		super();
 		this.articles = articles;
 		this.twitterPub = publishSite;
