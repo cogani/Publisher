@@ -2,7 +2,7 @@ import java.io.Serializable;
 
 public class Article implements Serializable{
 
-	private IUser user;
+	private User user;
 	private String title;
 	private String body;
 
@@ -11,14 +11,14 @@ public class Article implements Serializable{
 	 * @param title
 	 * @param body
 	 */
-	public Article(IUser user, String title, String body) {
+	public Article(User user, String title, String body) {
 		super();
 		this.user = user;
 		this.title = title;
 		this.body = body;
 	}
 
-	public final IUser getUser() {
+	public final User getUser() {
 		return user;
 	}
 

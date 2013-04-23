@@ -7,7 +7,7 @@ public class ArticleTest {
 
 	@Test
 	public void creatingArticle() {
-		IUser articleUser = new User();
+		User articleUser = new User();
 		
 		Article article = new Article(articleUser,"title","body");
 		

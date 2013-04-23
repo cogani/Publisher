@@ -5,7 +5,7 @@ import org.junit.Test;
 
 
 public class UserTest {
-	IUsers users;
+	Users users;
 	
 	@Before
 	public void setup(){
@@ -15,13 +15,13 @@ public class UserTest {
 	@Test
 	public void validateNotEmptyUserAsValidUser() {
 
-		IUser validUser = new User();
+		User validUser = new User();
 		assertEquals(true, users.validate(validUser));
 	}
 	
 	@Test
 	public void emptyUserIsNotValidUser() {
-		IUser nullUser = null;
+		User nullUser = null;
 		assertEquals(false, users.validate(nullUser));
 	}
 

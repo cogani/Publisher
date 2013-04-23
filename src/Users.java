@@ -1,8 +1,7 @@
 
-public class Users implements IUsers {
+public class Users {
 
-	@Override
-	public boolean validate(IUser user) {
+	public boolean validate(User user) {
 		return (user!=null);
 
 	}

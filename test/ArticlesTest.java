@@ -8,14 +8,14 @@ import org.junit.Test;
 
 public class ArticlesTest {
 	Articles articles;
-	IUsers usersMock;
+	Users usersMock;
 	IArticlesRepository repositoryArticles;
 	Article articleDummy;
 	
 	@Before
 	public void setup(){
 		// Creacion gestor de usuario como mock
-		usersMock = mock(IUsers.class);
+		usersMock = mock(Users.class);
 		// Creacion del respositorio de articulo
 		repositoryArticles = mock(IArticlesRepository.class);
 		

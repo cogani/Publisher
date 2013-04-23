@@ -13,7 +13,7 @@ public class FuntionalTest {
 
 	@Test
 	public void testing() {
-		IUsers users = new Users();
+		Users users = new Users();
 		
 		/*
 		 * En este test funcional dejo fuera los limites marcados por:
