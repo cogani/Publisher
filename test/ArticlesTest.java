@@ -1,6 +1,7 @@
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.stub;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.never;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -41,4 +42,24 @@ public class ArticlesTest {
 		
 		verify(repositoryArticles).save(articleDummy);
 	}
+	
+	@Test
+	public void onlyCanSavingArticleWithValidUser() {
+
+		articles.save(articleDummy);
+		ArticlesRepository repositoryArticlesMock = mock(ArticlesRepository.class);
+		Users usersStub = mock(Users.class);
+		stub(usersStub.validate(articleDummy.getUser())).toReturn(false);
+
+		/* Verificacion de behavior, para asegurar que nunca repositoryArticlesMock.save()
+		 * fue llamado
+		 */
+		verify(repositoryArticlesMock, never()).save(articleDummy);
+		
+		/* Tambien podria verificar que no hay mas iteraciones con este mock
+		 *  - verifyNoMoreInteractions(repositoryArticlesMock);
+		 *  Requiere importar verifyNoMoreInteractions
+		 */
+	}	
 }
+ 

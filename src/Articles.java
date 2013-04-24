@@ -1,6 +1,6 @@
 
 public class Articles{
-	Users usersMock;
+	Users users;
 	ArticlesRepository articlesRepository;
 
 	/**
@@ -9,13 +9,12 @@ public class Articles{
 	 */
 	public Articles(Users users, ArticlesRepository articlesRepository) {
 		super();
-		this.usersMock = users;
+		this.users = users;
 		this.articlesRepository = articlesRepository;
 	}
 
 	public void save(Article article) {
-		usersMock.validate(article.getUser());
-		articlesRepository.save(article);
+		if(users.validate(article.getUser()));
+			articlesRepository.save(article);
 	}
-
 }
